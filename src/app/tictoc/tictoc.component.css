@@ -1,0 +1,110 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+.cell:active {
+  transform: scale(0.9);
+}
+
+.cell.x {
+  background-color: #ff69b4;
+  color: #fff;
+}
+
+.cell.o {
+  background-color: #33cc33;
+  color: #fff;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.winner {
+  color: #33cc33;
+  animation: winner-animation 2s;
+}
+
+.draw {
+  color: #666;
+  animation: draw-animation 2s;
+}
+
+@keyframes winner-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes draw-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

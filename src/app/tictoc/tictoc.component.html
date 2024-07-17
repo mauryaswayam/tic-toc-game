@@ -1,0 +1,11 @@
+<div class="board">
+  <h1>Tic Tac Toe</h1>
+  <div class="row" *ngFor="let row of board; let rowIndex = index">
+    <div class="cell" *ngFor="let cell of row; let cellIndex = index" (click)="makeMove(rowIndex, cellIndex)">
+      {{ cell }}
+    </div>
+  </div>
+  <button (click)="resetGame()">Reset Game</button>
+  <p *ngIf="winner">Winner: {{ winner }}</p>
+  <p *ngIf="draw">It's a draw!</p>
+</div>
